@@ -1,6 +1,11 @@
 
 # Cl-Smt - Common Interface to SMT (Satisfiable Module Theories) solvers from Common Lisp
 
+This library provides an interface to Stat-of-the-Art SMT solvers,
+such as the entrants of [SMT-COMP](http://smtcomp.sourceforge.net/2017/).
+
+Fortunately the input to SMT solvers are already S-expression.
+
 ## Usage
 
 
