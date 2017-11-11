@@ -28,9 +28,9 @@ When DEBUG is non-nil, it does not remove the directory so that you can investig
 
 
 (defgeneric solve (input solver-designator &rest args)
-  :documentation "INPUT is a list of S-expressions which defines the SMT solver input[1].
+  (:documentation "INPUT is a list of S-expressions which defines the SMT solver input[1].
 solver-designator is a keyword that specifies the solver.
 ARGS is an optional list of arguments that are passed to the solver, which is implementation-dependent.
 
-[1] http://smtlib.cs.uiowa.edu/papers/smt-lib-reference-v2.6-r2017-07-18.pdf")
+[1] http://smtlib.cs.uiowa.edu/papers/smt-lib-reference-v2.6-r2017-07-18.pdf"))
 

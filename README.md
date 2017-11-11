@@ -30,13 +30,13 @@ The following repositories are work in progress. Checkmark means "completed".
 
 ## API
 
-     (defgeneric solve (input solver-designator &rest args)
-       :documentation
-       "INPUT is a list of S-expressions which defines the SMT solver input[1].
-        SOLVER-DESIGNATOR is a keyword that specifies the solver.
-        ARGS is an optional list of arguments that are passed to the solver, which is implementation-dependent.
+     (defgeneric solve (input solver-designator &rest args))
+
+       INPUT is a list of S-expressions which defines the SMT solver input[1].
+       SOLVER-DESIGNATOR is a keyword that specifies the solver.
+       ARGS is an optional list of arguments that are passed to the solver, which is implementation-dependent.
      
-     [1] http://smtlib.cs.uiowa.edu/papers/smt-lib-reference-v2.6-r2017-07-18.pdf")
+     [1] http://smtlib.cs.uiowa.edu/papers/smt-lib-reference-v2.6-r2017-07-18.pdf
 
 Sub-libraries should provide the methods for it.
 
