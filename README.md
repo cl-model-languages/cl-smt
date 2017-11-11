@@ -12,6 +12,22 @@ Examples are [here](http://smtlib.cs.uiowa.edu/examples.shtml).
 
 List of solvers [here](http://smtlib.cs.uiowa.edu/solvers.shtml).
 
+The following repositories are work in progress.
+
+* https://github.com/guicho271828/cl-smt.aprove
+* https://github.com/guicho271828/cl-smt.boolector
+* https://github.com/guicho271828/cl-smt.cvc4
+* https://github.com/guicho271828/cl-smt.mathsat5
+* https://github.com/guicho271828/cl-smt.opensmt2
+* https://github.com/guicho271828/cl-smt.rasmt
+* https://github.com/guicho271828/cl-smt.smtinterpol
+* https://github.com/guicho271828/cl-smt.stp
+* https://github.com/guicho271828/cl-smt.verit
+* https://github.com/guicho271828/cl-smt.yices2
+* https://github.com/guicho271828/cl-smt.z3
+* https://github.com/guicho271828/cl-smt.alt-ergo
+* https://github.com/guicho271828/cl-smt.smt-rat
+
 ## Usage
 
 
