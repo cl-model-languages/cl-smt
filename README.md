@@ -6,6 +6,12 @@ such as the entrants of [SMT-COMP](http://smtcomp.sourceforge.net/2017/).
 
 Fortunately the input to SMT solvers are already S-expression.
 
+Specification of SMT solver input is described in http://smtlib.cs.uiowa.edu/ .
+
+Examples are [here](http://smtlib.cs.uiowa.edu/examples.shtml).
+
+List of solvers [here](http://smtlib.cs.uiowa.edu/solvers.shtml).
+
 ## Usage
 
 
