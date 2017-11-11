@@ -8,19 +8,11 @@
   (:use :cl
         :cl-smt
         :fiveam
-        :trivia :alexandria :iterate))
+        :trivia :alexandria :iterate)
+  (:export
+   #:*smt-files*))
 (in-package :cl-smt.test)
 
 
-
-(def-suite :cl-smt)
-(in-suite :cl-smt)
-
-;; run test with (run! test-name) 
-
-(test cl-smt
-
-  )
-
-
-
+(defvar *smt-files*
+  (directory (asdf:system-relative-pathname :cl-smt #p"t/smt/*.*")))
