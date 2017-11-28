@@ -40,13 +40,10 @@ bool
 (def-suite :cl-smt.solve)
 (in-suite :cl-smt.solve)
 
+(named-readtables:in-readtable :fare-quasiquote)
+
 (test solve
-  (is (equal `(sat
-               (model
-                (define-fun y () int 0)
-                (define-fun x () int (- 3))
-                (define-fun z () int 2)))
-             (solve '((set-option :produce-models true)
+  (ematch (solve '((set-option :produce-models true)
                       (set-logic ^QF_LIA)
                       (declare-fun x () |Int|)
                       (declare-fun y () |Int|)
@@ -56,7 +53,18 @@ bool
                                     (>= (+ x 4) z))))
                       (check-sat)
                       (get-model))
-                    *solver*)))
+                    *solver*
+                    :debug t)
+    (`(sat
+       (model
+        (define-fun ,v1 () int ,a1)
+        (define-fun ,v2 () int ,a2)
+        (define-fun ,v3 () int ,a3)))
+      (progv (list v1 v2 v3) (mapcar #'eval (list a1 a2 a3))
+        (is-true
+         (and (or
+               (<= (+ x 3) (* 2 y))
+               (>= (+ x 4) z)))))))
   #+(or)
   (is (equal `(sat
                (model

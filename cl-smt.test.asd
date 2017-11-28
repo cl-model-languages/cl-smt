@@ -9,7 +9,8 @@
   :description "Test system of cl-smt"
   :license "LLGPL"
   :depends-on (:cl-smt
-               :fiveam)
+               :fiveam
+               :trivia.quasiquote)
   :components ((:module "t"
                 :components
                 ((:file "package"))))
