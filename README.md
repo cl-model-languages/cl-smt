@@ -15,21 +15,22 @@ Examples are also available in the [official website](http://smtlib.cs.uiowa.edu
 
 List of solvers are in the [official website](http://smtlib.cs.uiowa.edu/solvers.shtml).
 
-The following repositories are work in progress. Checkmark means "completed".
+The following solvers will be supported, and checkmark means "completed".
+Each solver `X` is available from an asdf system `cl-smt.X`.
 
-* [ ] https://github.com/guicho271828/cl-smt.aprove
-* [ ] https://github.com/guicho271828/cl-smt.boolector
-* [ ] https://github.com/guicho271828/cl-smt.cvc4
-* [ ] https://github.com/guicho271828/cl-smt.mathsat5
-* [ ] https://github.com/guicho271828/cl-smt.opensmt2
-* [ ] https://github.com/guicho271828/cl-smt.rasmt
-* [ ] https://github.com/guicho271828/cl-smt.smtinterpol
-* [ ] https://github.com/guicho271828/cl-smt.stp
-* [ ] https://github.com/guicho271828/cl-smt.verit
-* [ ] https://github.com/guicho271828/cl-smt.yices2
-* [ ] https://github.com/guicho271828/cl-smt.z3
-* [ ] https://github.com/guicho271828/cl-smt.alt-ergo
-* [ ] https://github.com/guicho271828/cl-smt.smt-rat
+* [ ] cl-smt.aprove
+* [ ] cl-smt.boolector
+* [ ] cl-smt.cvc4
+* [ ] cl-smt.mathsat5
+* [ ] cl-smt.opensmt2
+* [ ] cl-smt.rasmt
+* [ ] cl-smt.smtinterpol
+* [ ] cl-smt.stp
+* [ ] cl-smt.verit
+* [ ] cl-smt.yices2
+* [X] cl-smt.z3
+* [ ] cl-smt.alt-ergo
+* [ ] cl-smt.smt-rat
 
 ## API
 
