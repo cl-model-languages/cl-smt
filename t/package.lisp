@@ -14,8 +14,8 @@
    #:*solver*))
 (in-package :cl-smt.test)
 
-(def-suite :cl-smt)
-(in-suite :cl-smt)
+(def-suite :cl-smt.base)
+(in-suite :cl-smt.base)
 
 (defvar *smt-files*
   (directory (asdf:system-relative-pathname :cl-smt #p"smt/*.*")))
@@ -36,6 +36,9 @@ bool
                    (set-logic QF_LIA)
                    Bool
                    |Bool|))))))
+
+(def-suite :cl-smt.solve)
+(in-suite :cl-smt.solve)
 
 (test solve
   (is (equal `(sat
