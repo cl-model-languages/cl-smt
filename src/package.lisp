@@ -34,7 +34,7 @@ When DEBUG is non-nil, it does not remove the directory so that you can investig
              (uiop:run-program (format nil "rm -rf ~a" (namestring ,var)) :ignore-error-status t))))))
 
 
-(defgeneric solve (input solver-designator &key &allow-other-keys)
+(defgeneric solve (input solver-designator &key debug)
   (:documentation "INPUT is a list of S-expressions which defines the SMT solver input[1].
 They are treated as a single file.
 solver-designator is a keyword that specifies the solver.

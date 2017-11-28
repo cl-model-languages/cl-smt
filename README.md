@@ -30,7 +30,7 @@ The following repositories are work in progress. Checkmark means "completed".
 
 ## API
 
-     (defgeneric solve (input solver-designator &rest args))
+     (defgeneric solve (input solver-designator &key debug))
 
        INPUT is a list of S-expressions which defines the SMT solver input[1].
        SOLVER-DESIGNATOR is a keyword that specifies the solver.
