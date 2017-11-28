@@ -4,13 +4,16 @@
 This library provides an interface to State-of-the-Art SMT solvers,
 such as the entrants of [SMT-COMP](http://smtcomp.sourceforge.net/2017/).
 
-Fortunately the input to SMT solvers are already S-expression.
+The input to SMT solvers are already S-expression.
+Unfortunately, there is a slight difference between the standard CL convention
+and the conventions in SMT-LIBS v2.
+We absorb the difference using a custom formatter.
 
-Specification of SMT solver input is described in http://smtlib.cs.uiowa.edu/ .
+Specification of SMT solver input is described in the [official website](http://smtlib.cs.uiowa.edu/) .
 
-Examples are [here](http://smtlib.cs.uiowa.edu/examples.shtml).
+Examples are also available in the [official website](http://smtlib.cs.uiowa.edu/examples.shtml).
 
-List of solvers [here](http://smtlib.cs.uiowa.edu/solvers.shtml).
+List of solvers are in the [official website](http://smtlib.cs.uiowa.edu/solvers.shtml).
 
 The following repositories are work in progress. Checkmark means "completed".
 
@@ -39,6 +42,33 @@ The following repositories are work in progress. Checkmark means "completed".
      [1] http://smtlib.cs.uiowa.edu/papers/smt-lib-reference-v2.6-r2017-07-18.pdf
 
 Sub-libraries should provide the methods for it.
+
+## S-exp -> SMT-LIB
+
+Although SMT-LIB v2 input is also an S-exp, there is a significant difference in the
+assumptions made in CL and SMT-LIB. To absorb this difference, we provide a special DSL
+for feeding the SMT-LIB input conveniently from Common Lisp.
+
+    function format-smt (s forms)
+    
+    Print a smt program to a stream.
+    Although it may sound intuitive, this is not; For example,
+    
+    * NIL should be written as () instead
+    * Package prefix is not allowed while keywords should be printed with a colon, so princ is NG
+    * Type checking (only numbers, symbols, lists)
+    * Dotted list is not allowed.
+    * Incompatible assumptions in the readtable case between SMT-LIB and Common Lisp.
+    
+    We achieve the versatile output by NOT making any assumptions to the readtable case, nor the print case.
+    
+    Normal, non-mixed case symbols are printed in downcase, because most keywords in SMT are defined in downcase.
+    Mixed case symbols are printed in vertical bars, as usual.
+    
+    However, certain symbols need to be printed in ALL UPCASE.
+    We mark such symbols by prepending a caret ^ character, i.e. ^QF_LIA .
+    
+    All symbols except keywords are printed without package prefixes, including uninterned symbols.
 
 ## Dependencies
 This library is at least tested on implementation listed below:
