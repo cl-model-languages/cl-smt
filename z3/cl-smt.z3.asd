@@ -5,7 +5,6 @@
   :mailto "guicho2.71828@gmail.com"
   :license "LLGPL"
   :depends-on (:trivia :alexandria :iterate :cl-smt)
-  :pathname "z3"
   :components ((:file "package"))
   :description "cl-smt implementation for z3 https://github.com/Z3Prover/z3/wiki"
   :in-order-to ((test-op (test-op :cl-smt.z3.test)))
