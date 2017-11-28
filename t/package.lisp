@@ -17,7 +17,7 @@
 (in-suite :cl-smt)
 
 (defvar *smt-files*
-  (directory (asdf:system-relative-pathname :cl-smt #p"t/smt/*.*")))
+  (directory (asdf:system-relative-pathname :cl-smt #p"smt/*.*")))
 
 (test printer
    (is (equal "(set-option :produce-models true)
