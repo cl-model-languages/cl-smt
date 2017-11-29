@@ -28,7 +28,7 @@ Each solver `X` is available from an asdf system `cl-smt.X`.
 * [ ] cl-smt.smtinterpol
 * [ ] cl-smt.stp
 * [ ] cl-smt.verit
-* [ ] cl-smt.yices2
+* [X] cl-smt.yices2 --- not conforming to smtlib v2
 * [X] cl-smt.z3
 * [ ] cl-smt.alt-ergo
 * [ ] cl-smt.smt-rat
