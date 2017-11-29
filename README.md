@@ -21,7 +21,7 @@ Each solver `X` is available from an asdf system `cl-smt.X`.
 * [ ] cl-smt.aprove
 * [ ] cl-smt.boolector
 * [X] cl-smt.cvc3 --- not conforming to smtlib v2
-* [ ] cl-smt.cvc4
+* [X] cl-smt.cvc4
 * [ ] cl-smt.mathsat5
 * [ ] cl-smt.opensmt2
 * [ ] cl-smt.rasmt
