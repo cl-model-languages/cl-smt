@@ -13,7 +13,7 @@
   (load-op :before (op c)
             (uiop:symbol-call :trivial-package-manager
                               :ensure-program
-                              "yices-smt2"
+                              "yices_smt2"
                               :apt "sri-csl/formal-methods/yices2" ; for <= xenial only
                               :dnf "yices2"
                               :yum "yices2"
@@ -28,11 +28,5 @@
                                                               (asdf:system-relative-pathname
                                                                :cl-smt.yices2 "yices-2.5.4/bin/")
                                                               (uiop:getenv "PATH"))))
-                              :from-source (format nil "make -C ~a -f ~a"
-                                                   (asdf:system-source-directory :cl-smt.yices2)
-                                                   (asdf:system-relative-pathname
-                                                    :cl-smt.yices2
-                                                    #+linux "linux.mk"
-                                                    #+darwin "darwin.mk"
-                                                    #+(and x86-64 windows) "win64.mk"
-                                                    #+(and (not x86-64) windows) "win32.mk")))))
+                              :from-source (format nil "make -C ~a"
+                                                   (asdf:system-source-directory :cl-smt.yices2)))))
